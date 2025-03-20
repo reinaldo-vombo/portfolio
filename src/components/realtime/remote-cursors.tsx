@@ -3,9 +3,9 @@ import { SocketContext, User, UserMap } from "@/contexts/socketio";
 import { useMouse } from "@/hooks/use-mouse";
 import { useThrottle } from "@/hooks/use-throttle";
 import { MousePointer2 } from "lucide-react";
-import React, { useContext, useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
-import { AnimatePresence, motion, useAnimation } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { useMediaQuery } from "@/hooks/use-media-query";
 
 // TODO: add clicking animation

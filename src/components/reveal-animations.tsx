@@ -3,7 +3,7 @@
 import { motion, useAnimation, useInView } from "framer-motion";
 
 import { cn } from "@/lib/utils";
-import { ReactNode, useEffect, useRef } from "react";
+import { JSX, ReactNode, useEffect, useRef } from "react";
 
 interface BlurIntProps {
   children: ReactNode;
