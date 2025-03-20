@@ -4,7 +4,7 @@ export const useThrottle = <T extends (...args: any[]) => void>(
   func: T,
   limit: number
 ): T => {
-  const lastFunc = useRef<ReturnType<typeof setTimeout>>();
+  const lastFunc = useRef<ReturnType<typeof setTimeout>>(null);
   const lastRan = useRef<number>(0);
 
   return useCallback(
@@ -13,13 +13,15 @@ export const useThrottle = <T extends (...args: any[]) => void>(
         func(...args);
         lastRan.current = Date.now();
       } else {
-        clearTimeout(lastFunc.current);
-        lastFunc.current = setTimeout(() => {
-          if (Date.now() - lastRan.current >= limit) {
-            func(...args);
-            lastRan.current = Date.now();
-          }
-        }, limit - (Date.now() - lastRan.current));
+        if (lastFunc.current) {
+          lastFunc.current = setTimeout(() => {
+            if (Date.now() - lastRan.current >= limit) {
+              func(...args);
+              lastRan.current = Date.now();
+            }
+          }, limit - (Date.now() - lastRan.current));
+          clearTimeout(lastFunc.current);
+        }
       }
     },
     [func, limit]
