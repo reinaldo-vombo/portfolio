@@ -337,25 +337,21 @@ const projects: Project[] = [
     },
   },
   {
-    id: "couponluxury",
-    category: "Coupon site",
-    title: "Coupon Luxury",
-    src: "/assets/projects-screenshots/couponluxury/landing.png",
-    screenshots: ["1.png", "2.png", "3.png", "4.png", "5.png"],
-    live: "https://www.couponluxury.com/",
+    id: "gamezone",
+    category: "Game store",
+    title: "Game Zone",
+    src: "/assets/projects-screenshots/gamezone/landing.jpeg",
+    screenshots: ["1.png", "2.png", "3.png", "4.png"],
+    live: "https://game-ten-zeta.vercel.app/",
     skills: {
       frontend: [
-        PROJECT_SKILLS.js,
+        PROJECT_SKILLS.ts,
         PROJECT_SKILLS.next,
-        PROJECT_SKILLS.chakra,
-        PROJECT_SKILLS.vue,
+        PROJECT_SKILLS.tailwind,
+        PROJECT_SKILLS.react,
       ],
       backend: [
-        PROJECT_SKILLS.node,
-        PROJECT_SKILLS.express,
-        PROJECT_SKILLS.prisma,
-        PROJECT_SKILLS.postgres,
-        PROJECT_SKILLS.docker,
+        PROJECT_SKILLS.sanity,
       ],
     },
     get content(): JSX.Element {
@@ -372,7 +368,7 @@ const projects: Project[] = [
             As soon as you land, boom! You&apos;re greeted with the freshest
             coupons and top-tier deals that&apos;ll make your wallet happy.
           </p>
-          <SlideShow images={[`${BASE_PATH}/couponluxury/landing.png`]} />
+          <SlideShow images={[`${BASE_PATH}/gamezone/landing.jpeg`]} />
           <TypographyH3 className="my-4 ">Stores</TypographyH3>
           <p className="font-mono mb-2">
             Dive into a comprehensive list of stores, each packed with exclusive
@@ -381,8 +377,8 @@ const projects: Project[] = [
           </p>
           <SlideShow
             images={[
-              `${BASE_PATH}/couponluxury/stores.png`,
-              `${BASE_PATH}/couponluxury/store.png`,
+              `${BASE_PATH}/gamezone/1.jpeg`,
+              `${BASE_PATH}/gamezone/2.jpeg`,
             ]}
           />
           <TypographyH3 className="my-4 mt-8">Categories</TypographyH3>
