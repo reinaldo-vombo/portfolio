@@ -82,20 +82,36 @@ const HeroSection = () => {
                 </BlurIn>
               </div>
               <div className="mt-8 md:ml-2 flex flex-col gap-3">
-                <Link
-                  href={
-                    "https://drive.google.com/file/d/1O97WCk2DrO9x6SHOqf7LvRbmHkMgGIb4/view?usp=sharing"
-                  }
-                  target="_blank"
-                  className="flex-1"
-                >
-                  <BoxReveal delay={2} width="100%" >
-                    <Button className="flex items-center gap-2 w-full">
-                      <File size={24} />
-                      <p>Resume</p>
-                    </Button>
-                  </BoxReveal>
-                </Link>
+                <div className="flex items-center gap-4">
+                  <Link
+                    href={
+                      "https://drive.google.com/file/d/1a0rm2fFq28xOVTlOeP-NVcLKEbRVFoai/view?usp=sharing"
+                    }
+                    target="_blank"
+                    className="flex-1"
+                  >
+                    <BoxReveal delay={2} width="100%" >
+                      <Button className="flex items-center gap-2 w-full">
+                        <File size={24} />
+                        <p>Resume (Pt)</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                  <Link
+                    href={
+                      "https://drive.google.com/file/d/1lOQ0JyrBsMYnWmkZT29idFKdA2mb7i_B/view?usp=sharing"
+                    }
+                    target="_blank"
+                    className="flex-1"
+                  >
+                    <BoxReveal delay={2} width="100%" >
+                      <Button className="flex items-center gap-2 w-full">
+                        <File size={24} />
+                        <p>Resume (En)</p>
+                      </Button>
+                    </BoxReveal>
+                  </Link>
+                </div>
                 <div className="md:self-start flex gap-3">
                   <Tooltip delayDuration={300}>
                     <TooltipTrigger asChild>
